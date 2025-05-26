@@ -3,7 +3,7 @@ title: "Windows 365 - Intune から確認できるレポート, 監視機能に�
 emoji: "🚁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Windows", "Microsoft365", "Windows365","Tech" ]
-published: true
+published: false
 ---
 
 :::message alert
