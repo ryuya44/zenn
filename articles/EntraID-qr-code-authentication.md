@@ -1,5 +1,5 @@
 ---
-title: "Windows 365 - 展開済みのクラウド PC を移動する方法 -"
+title: "Entra ID - QR コード認証を試してみる！ -"
 emoji: "🚁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Windows", "Microsoft365", "Windows365","Tech" ]

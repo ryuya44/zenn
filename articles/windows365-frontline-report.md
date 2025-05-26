@@ -32,7 +32,7 @@ Intune 管理センターでは、Windows 365 に特化したレポート機能�
 [リソース パフォーマンス レポート](https://learn.microsoft.com/ja-jp/windows-365/enterprise/report-resource-performance)
 [クラウド PC のリージョン間ディザスター リカバリー状態レポート](https://learn.microsoft.com/ja-jp/windows-365/enterprise/cross-region-disaster-recovery-report)
 
-## 2.試してみる！
+## 2.試してみる！ 
 
 ### 2.1 構成の説明
 1. クラウド PC を日本の東リージョンに展開しています。ネットワークは Microsoft Hosted Network を利用しています。
