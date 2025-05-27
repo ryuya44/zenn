@@ -11,86 +11,100 @@ published: true
 :::
 
 ## 1. 概要
-Windows 365 は、グループに対して割り当て済みのすべてあるいは一部のクラウド PC を、異なるネットワーク、リージョンに移動することができます。
+Entra ID の認証方法として、QR コード認証がプレビューされました！
+フロントラインワーカーの抱える課題として、サインインする際に、ユーザー名とパスワードを入力する手間があります。
+以下の公開情報にも記載のように、フロントラインワーカーに対して、ＱＲコード認証はシンプルな認証方法を提供することができます。
+
 
 :::message
-ポイント 一部のクラウド PC のみを移動することが可能になりました。
+ポイント QR コード認証は、QR コードスキャンと PIN の入力のみでサインインするが可能です。条件付きアクセス
 :::
 
 ### この機能のメリット
-グループの一部のメンバーが海外異動出張を行うときに、クラウド PC を移動させることでレイテンシーや地域に依存するデータ主権のルールに遵守することができます。
-また、別のネットワークにクラウド PC を移動させることで、ネットワークの再構成を行うときなどで、メンテナンス作業の負荷を削減できます。
 
-#### 公開情報：[クラウド PC を移動する | Microsoft Learn ](https://learn.microsoft.com/ja-jp/windows-365/enterprise/move-cloud-pc)
+
+#### 公開情報：[ Simplify frontline workers’ sign-in experience with QR code authentication ](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/simplify-frontline-workers%E2%80%99-sign-in-experience-with-qr-code-authentication/3822034)
 
 
 ## 2.試してみる！
 
 ### 2.1 構成の説明
-1. クラウド PC を日本の東リージョンに展開しています。ネットワークは Microsoft Hosted Network を利用しています。
-※リージョンは自動を選択することが推奨されています。今回は検証のため東日本にしました。
-![](https://storage.googleapis.com/zenn-user-upload/c674c31754d6-20250520.png)
-このポリシーで展開されたクラウドPC CPC-ryuya-67E4K を今回移動させる対象とします。
-![](https://storage.googleapis.com/zenn-user-upload/a0dbb159b327-20250520.png)
+1. 今回は Entra ID の共有デバイス モードの Android デバイスで、QR コード認証を試してみます。
+
+
+### 2.2 QR コード認証方法を有効化する！
+
+
+以下の公開情報に沿って検証してみます。細かい前提条件を確認されたい場合、以下の公開情報が参考になります。
+#### 公開情報：[ Microsoft Entra ID の認証方法 - QR コード認証方法 (プレビュー) ](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/simplify-frontline-workers%E2%80%99-sign-in-experience-with-qr-code-authentication/3822034)
+
+1. 少なくとも認証ポリシー管理者以上で Entra 管理センター (https://entra.microsoft.com)にアクセスします。
+左のブレードの [保護]->[認証方法]-> QR コード認証(プレビュー) の順にクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/0440a92022f3-20250526.png)
+
+
+2. QR コード認証の設定画面が表示されます。この表示画面では、ＱＲコード認証の有効化と有効化するグループ選択します。
+今回は、FLW というグループを選択しました。次に構成をクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/2257562b6e5a-20250526.png)
+
+
+3. この画面では、QR コード認証で利用する PIN の長さ(8 桁以上 20 桁以下です。)と QR コードの有効期限 ( 1 日以上 395 日以下) の設定ができます。今回は既定 (365 日) のまま進みます。
+![](https://storage.googleapis.com/zenn-user-upload/9dfea5e545a7-20250526.png)
+
+
+4. QR コード認証が有効になったことを確認できました。
+![](https://storage.googleapis.com/zenn-user-upload/88bcaac83342-20250526.png)
+
+### 2.3 ユーザーに対して QR コード認証方法を追加する！
+
+5. Entra 管理センターで[ユーザー]に移動し、QRコード認証を追加したいユーザーを選択し、[認証方法] をクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/2330d6bab684-20250527.png)
+
+6. [認証方法の追加] で、方法の選択の項目で QRコード(プレビュー)、必要に応じて有効期限を変更し、アクティブ化の時間を今すぐに選択します。
+初回サインインのみ有効な PIN を設定します。
+![](https://storage.googleapis.com/zenn-user-upload/0dc4a2c12a17-20250527.png)
+
+
+7. 以下の画像のように、設定した PIN と作成された QR コードが表示されます。PIN と　QR コードはユーザーにセキュアな方法で伝える必要があります。 
+![](https://storage.googleapis.com/zenn-user-upload/f11af25c5bcf-20250527.png)
+
+これで、選択したユーザーに対して、QR コード認証を有効化することができます。
+
+### 2.4 アプリケーションに対して、QR コード認証を有効化する！
+上記 2.3 までの手順ですと、Web ブラウザからのサインインに対して、QR コード認証が有効になる動作となります。
+そのため、モバイルアプリにサインインする際に QR コード認証を有効にしたい場合、ひと手間加える必要があります。
+
+8. Intune 管理センター(https://intune.microsoft.com) で [アプリ] -> [構成] -> [新しいポリシー] -> [ マネージド デバイス ] の順にクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/7da8c83e5614-20250527.png)
+
+9. ポリシーの確認画面で、ポリシーの名前を入力し、プラットフォームは Android Enterprise を選択し、デバイスの種類は、フル マネージド、専用、会社所有の仕事用プロファイルのみ、アプリは、Authenticator を選択します。
+![](https://storage.googleapis.com/zenn-user-upload/e1a6b62171d5-20250527.png)
+
+10. 構成設定の形式は、構成デザイナーを設定するを選択します。右のブレードが表示されますので、Preferred authentication configuration を選択し、OK をクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/de201da777aa-20250527.png)
+
+11. 構成キーの構成値を qrpin と入力し、次へをクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/1c339896dbf3-20250527.png)
+
+12. 割り当てるデバイス グループを選択します。
+![](https://storage.googleapis.com/zenn-user-upload/b478ad703d96-20250527.png)
+
+13. 構成内容を確認し、作成をクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/ffbe649ffbfb-20250527.png)
+
+14. QR コード認証に対応している モバイルアプリケーションのサインイン画面に、QR コード認証が表示されます。
+![](https://storage.googleapis.com/zenn-user-upload/00de026f150f-20250527.jpg)
+
+上記手順を行っていない場合、表示されません。
+
+### 2.5 ユーザーの初回サインインエクスペリエンスを確認する！
+
+さて、エンドユーザー視点に立って、QR コード認証でサインインしてみます。
 
 
 
 
-### 2.2 クラウド PC を移動してみる！
 
-1. 移動させるクラウド PC を展開したポリシーを選択します。
-![](https://storage.googleapis.com/zenn-user-upload/b6bcfa264212-20250520.png)
-
-2. 当該ポリシーをクリックすると、構成内容が表示されます。全般の右隣の "編集" をクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/0d81ba995a1e-20250520.png)
-
-
-3. 移動先のリージョンあるいはネットワークを選択し、"次へ" をクリックします。今回は、地理をドイツにします。
-※今回はリージョンの移動にしましたが、ネットワークの移動でも可能です。
-![](https://storage.googleapis.com/zenn-user-upload/7ffae5d40d92-20250520.png)
-
-
-4. 構成内容を確認の上、"更新" をクリックします
-![](https://storage.googleapis.com/zenn-user-upload/5be94379ccf0-20250520.png)
-
-
-5. "この構成を適用" をクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/2c9f828d8173-20250520.png)
-
-6. 今回は一台のみ、別リージョンに移動したいので、"選択したデバイスにリージョンまたは Azure ネットワーク接続" を選択し、"適用" をクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/8d88e22bbe47-20250520.png)
-
-
-7. デバイスの選択画面が表示されます。このプロビジョニングポリシーで展開している クラウド PC から移動するデバイスを選択し、画面下部の "選択" をクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/151146583cb9-20250520.png)
-これで、選択したデバイスに対して、別リージョンに移動する手順は完了です！
-
-
-## 3. 移動中のクラウド PC の状態を監視してみる！
-1. Microsoft Intune 管理センター の左のブレードの デバイス > 監視 > クラウド PC アクション（プレビュー）の順にクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/8aee55451c73-20250520.png)
-
-
-2. クラウド PC の過去 90 日間のアクションの状態を表示されます。移動の対象デバイスについて、アクションがリージョンの移動、状態が "進行中" と確認できます。
-![](https://storage.googleapis.com/zenn-user-upload/945b10640b0f-20250520.png)
-完了すると状態が、"成功" になります。
-![](https://storage.googleapis.com/zenn-user-upload/ef4853d4ec90-20250520.png)
-
-
-## 4. ラウンドトリップを計測してみる!
-
-- 移動前
-接続元 : 東京
-接続先のクラウド PC : 日本
-ラウンドトリップ : 8 ミリ秒
-![](https://storage.googleapis.com/zenn-user-upload/ade62bbc2088-20250520.png)
-
-- 移動後
-接続元 : 東京
-接続先のクラウド PC : ドイツ
-ラウンドトリップ : 280 ミリ秒
-![](https://storage.googleapis.com/zenn-user-upload/8ebd35208a64-20250520.png)
-移動後、ラウンドトリップが大きくなったので、無事に移動できたことが確認できました！
 
 
 ## 5. まとめ
