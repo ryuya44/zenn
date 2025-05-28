@@ -2,7 +2,7 @@
 title: "Entra ID - QR コード認証を試してみる！ -"
 emoji: "🚁"
 type: "tech" # tech: 技術記事 / idea: アイデア
-topics: ["Windows", "Microsoft365", "Windows365","Tech" ]
+topics: ["Windows", "Microsoft365", "EntraID","Intune","Tech" ]
 published: false
 ---
 
@@ -27,7 +27,7 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 ## 2.試してみる！
 
 ### 2.1 構成の説明
-1. 今回は Entra ID の共有デバイス モードの Android デバイスで、QR コード認証を試してみます。
+1. 今回は Entra ID の共有デバイス モードの Android デバイスで、QR コード認証を試します。
 
 
 ### 2.2 QR コード認証方法を有効化する！
@@ -58,7 +58,7 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 5. Entra 管理センターで [ユーザー] に移動し、QR コード認証を有効にしたいユーザーを選択し、[認証方法] をクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/2330d6bab684-20250527.png)
 
-6. [認証方法の追加] で、方法の選択の項目で QR コード(プレビュー)、必要に応じて有効期限を変更し、アクティブ化の時間を今すぐに選択します。初回サインインのみ有効な PIN を設定します。
+6. [認証方法の追加] で、方法の選択の項目で QR コード(プレビュー)、必要に応じて有効期限を変更し、アクティブ化の時間を [今すぐ] に選択します。初回サインインのみ有効な PIN を設定します。
 ![](https://storage.googleapis.com/zenn-user-upload/0dc4a2c12a17-20250527.png)
 
 
