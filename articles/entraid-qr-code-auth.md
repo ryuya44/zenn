@@ -11,7 +11,7 @@ published: false
 :::
 
 ## 1. 概要
-Entra ID の認証方法として、QR コード認証がプレビューされました！現時点では、iOS と Android に対応しています。
+Entra ID の認証方法として、QR コード認証がプレビューされました！現時点では、Android, iOS, iPadOS の**共有デバイス**に対応しています。
 フロントラインワーカーの抱える課題として、サインインする際に、ユーザー名とパスワードを入力する手間があります。
 以下の公開情報にも記載のように、フロントラインワーカーに対して、ＱＲコード認証はシンプルな認証方法を提供します。QR コード認証と条件付きアクセス ポリシーを併用し、セキュリティレベルを上げることを推奨されています。
 
@@ -20,7 +20,7 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 
 
 :::message
-ポイント QR コード認証は、QR コードスキャンと PIN の入力のみでサインインするが可能です。
+ポイント QR コード認証は、QR コードスキャンと PIN の入力のみでサインインが可能です。
 :::
 
 
@@ -72,25 +72,25 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 上記 2.3 までの手順ですと、Web ブラウザからのサインインに対して、QR コード認証が有効になる動作となります。
 そのため、モバイルアプリにサインインする際に QR コード認証を有効にしたい場合、ひと手間加える必要があります。
 
-8. Intune 管理センター(https://intune.microsoft.com) で [アプリ] -> [構成] -> [新しいポリシー] -> [マネージド デバイス] の順にクリックします。
+1. Intune 管理センター(https://intune.microsoft.com) で [アプリ] -> [構成] -> [新しいポリシー] -> [マネージド デバイス] の順にクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/7da8c83e5614-20250527.png)
 
-9. ポリシーの確認画面で、ポリシーの名前を入力し、プラットフォームは Android Enterprise を選択し、デバイスの種類は、"フル マネージド、専用、会社所有の仕事用プロファイルのみ" 、アプリは、Authenticator を選択します。
+2. ポリシーの確認画面で、ポリシーの名前を入力し、プラットフォームは Android Enterprise を選択し、デバイスの種類は、"フル マネージド、専用、会社所有の仕事用プロファイルのみ" 、アプリは、Authenticator を選択します。
 ![](https://storage.googleapis.com/zenn-user-upload/e1a6b62171d5-20250527.png)
 
-10. 構成設定の形式は、[構成デザイナーを設定する] を選択します。右のブレードが表示されますので、Preferred authentication configuration を選択し、[OK] をクリックします。
+3. 構成設定の形式は、[構成デザイナーを設定する] を選択します。右のブレードが表示されますので、Preferred authentication configuration を選択し、[OK] をクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/de201da777aa-20250527.png)
 
-11. 構成キーの構成値を qrpin と入力し、[次へ] をクリックします。
+4. 構成キーの構成値を qrpin と入力し、[次へ] をクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/1c339896dbf3-20250527.png)
 
-12. 割り当てるデバイス グループを選択します。
+5. 割り当てるデバイス グループを選択します。
 ![](https://storage.googleapis.com/zenn-user-upload/b478ad703d96-20250527.png)
 
-13. 構成内容を確認し、[作成] をクリックします。
+6. 構成内容を確認し、[作成] をクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/ffbe649ffbfb-20250527.png)
 
-14. QR コード認証に対応している モバイルアプリケーションのサインイン画面に、QR コード認証が表示されます。
+7. QR コード認証に対応している モバイルアプリケーションのサインイン画面に、QR コード認証が表示されます。
 ![](https://storage.googleapis.com/zenn-user-upload/00de026f150f-20250527.jpg)
 
 上記手順を行っていない場合、以下のように表示されません。
@@ -98,16 +98,31 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 
 ### 2.5 ユーザーの初回サインインエクスペリエンスを確認する！
 
-さて、エンドユーザー視点に立って、QR コード認証でサインインしてみます。
+さて、エンドユーザー視点に立って、モバイルアプリの Teams に QR コード認証でサインインしてみます。
 
+1. Sign in with a QR code をクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/00de026f150f-20250527.jpg)
 
+2. QR コードをスキャンします。
+![](https://storage.googleapis.com/zenn-user-upload/42b81499862a-20250528.jpg)
 
+3. QR コードの PIN を入力します。 
+![](https://storage.googleapis.com/zenn-user-upload/9058d90c9bef-20250528.jpg)
 
+4. サインインできました！
+![](https://storage.googleapis.com/zenn-user-upload/eca410790795-20250528.jpg)
+
+※初回サインインは、PIN の再設定を行った後サインインする動作となります。
+
+細かい条件や動作を確認されたい方は、以下の公開情報が参考になると思います。
+
+[Microsoft Entra ID の認証方法 - QR コード認証方法 (プレビュー)](https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-authentication-qr-code)
+[Microsoft Entra ID で QR コード認証方法を有効にする方法 (プレビュー)](https://learn.microsoft.com/ja-jp/entra/identity/authentication/how-to-authentication-qr-code)
 
 
 
 ## 3. まとめ
-今回は展開済みのクラウド PC を移動する方法をご紹介しました！
+今回は プレビュー中の QR コード認証を試してみました！QR コードのスキャンと PIN の入力のみでサインインできるのは魅力的ですね。個人的に Windows の共有端末でも使えるようになればもっと良いと思いました。今後に期待ですね！
 本ブログがみなさまの参考になれば幸いです😉
 
 
