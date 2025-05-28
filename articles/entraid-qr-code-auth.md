@@ -12,18 +12,17 @@ published: false
 
 ## 1. 概要
 Entra ID の認証方法として、QR コード認証がプレビューされました！
+現時点では、iOS と Android に対応しています。
 フロントラインワーカーの抱える課題として、サインインする際に、ユーザー名とパスワードを入力する手間があります。
-以下の公開情報にも記載のように、フロントラインワーカーに対して、ＱＲコード認証はシンプルな認証方法を提供することができます。
+以下の公開情報にも記載のように、フロントラインワーカーに対して、ＱＲコード認証はシンプルな認証方法を提供します。以下の公開情報に記載のとおり、QR コード認証と条件付きアクセス ポリシーを併用し、セキュアにすることを推奨されています。
+
+
+公開情報：[ Simplify frontline workers’ sign-in experience with QR code authentication ](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/simplify-frontline-workers%E2%80%99-sign-in-experience-with-qr-code-authentication/3822034)
 
 
 :::message
-ポイント QR コード認証は、QR コードスキャンと PIN の入力のみでサインインするが可能です。条件付きアクセス
+ポイント QR コード認証は、QR コードスキャンと PIN の入力のみでサインインするが可能です。
 :::
-
-### この機能のメリット
-
-
-#### 公開情報：[ Simplify frontline workers’ sign-in experience with QR code authentication ](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/simplify-frontline-workers%E2%80%99-sign-in-experience-with-qr-code-authentication/3822034)
 
 
 ## 2.試してみる！
