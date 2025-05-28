@@ -3,7 +3,7 @@ title: "Entra ID - QR コード認証を試してみる！ -"
 emoji: "🚁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Windows", "Microsoft365", "Windows365","Tech" ]
-published: true
+published: false
 ---
 
 :::message alert
@@ -107,7 +107,7 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 
 
 
-## 5. まとめ
+## 3. まとめ
 今回は展開済みのクラウド PC を移動する方法をご紹介しました！
 本ブログがみなさまの参考になれば幸いです😉
 
