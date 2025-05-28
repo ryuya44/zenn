@@ -77,7 +77,7 @@ Microsoft Teams, Managed Home Screen には、最適化された QR コード �
 1. Intune 管理センター(https://intune.microsoft.com) で [アプリ] -> [構成] -> [新しいポリシー] -> [マネージド デバイス] の順にクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/7da8c83e5614-20250527.png)
 
-2. ポリシーの確認画面で、ポリシーの名前を入力し、プラットフォームは Android Enterprise を選択し、プロファイルの種類は、[フル マネージド、専用、会社所有の仕事用プロファイルのみ] を選択します。対象アプリは、Authenticator を選択します。
+2. ポリシーの確認画面で、ポリシーの名前を入力し、プラットフォームは Android Enterprise を選択し、プロファイルの種類は、[フル マネージド、専用、会社所有の仕事用プロファイルのみ] を選択します。対象アプリは、[Microsoft Authenticator] を選択します。
 ![](https://storage.googleapis.com/zenn-user-upload/e1a6b62171d5-20250527.png)
 
 3. 構成設定の形式は、[構成デザイナーを設定する] を選択します。右のブレードが表示されますので、[Preferred authentication configuration] を選択し、[OK] をクリックします。
