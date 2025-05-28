@@ -3,7 +3,7 @@ title: "Entra ID - QR コード認証を試してみる！ -"
 emoji: "🚁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Windows", "Microsoft365", "EntraID","Intune","Tech" ]
-published: false
+published: true
 ---
 
 :::message alert
