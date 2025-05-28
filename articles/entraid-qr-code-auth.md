@@ -13,7 +13,7 @@ published: false
 ## 1. 概要
 Entra ID の認証方法として、QR コード認証がプレビューされました！現時点では、Android, iOS, iPadOS の**共有デバイス**に対応しています。
 フロントライン ワーカーの抱える課題として、サインインする際に、ユーザー名とパスワードを入力する手間があります。
-以下の公開情報にも記載のように、フロントライン ワーカーに対して、QR コード認証はシンプルな認証方法を提供します。QR コード認証と条件付きアクセス ポリシーを併用し、セキュリティ レベルを上げることを推奨されています。
+以下の公開情報にも記載のように、フロントライン ワーカーに対して、QR コード認証はシンプルな認証方法を提供します。また、QR コード認証と条件付きアクセス ポリシーを併用し、セキュリティ レベルを上げることを推奨されています。
 
 
 公開情報：[ Simplify frontline workers’ sign-in experience with QR code authentication ](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/simplify-frontline-workers%E2%80%99-sign-in-experience-with-qr-code-authentication/3822034)
@@ -37,7 +37,7 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 #### 公開情報：[ Microsoft Entra ID の認証方法 - QR コード認証方法 (プレビュー) ](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/simplify-frontline-workers%E2%80%99-sign-in-experience-with-qr-code-authentication/3822034)
 
 1. 少なくとも認証ポリシー管理者以上で Entra 管理センター (https://entra.microsoft.com) にアクセスします。
-左のブレードの [保護] ->[認証方法]-> [QR コード認証 (プレビュー)] の順にクリックします。
+左のブレードの [保護] -> [認証方法] -> [QR コード認証 (プレビュー)] の順にクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/0440a92022f3-20250526.png)
 
 
@@ -68,9 +68,10 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 
 これで、選択したユーザーに対して、QR コード認証を有効化することができます。
 
-### 2.4 アプリケーションに対して、QR コード認証を有効化する！
-上記 2.3 までの手順ですと、Web ブラウザからのサインインに対して、QR コード認証が有効になる動作となります。
-そのため、モバイル アプリにサインインする際に QR コード認証を有効にしたい場合、ひと手間加える必要があります。
+### 2.4 QR コードを使用して、Microsoft Microsoft Teams にサインインする！
+上記 2.3 までの手順ですと、Web サインインに対して、QR コード認証が有効になる動作となります。
+Microsoft Teams, Managed Home Screen には、最適化された QR コード サインイン エクスペリエンスがあります。
+そのための設定を Intune から行います。
 
 1. Intune 管理センター(https://intune.microsoft.com) で [アプリ] -> [構成] -> [新しいポリシー] -> [マネージド デバイス] の順にクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/7da8c83e5614-20250527.png)
@@ -95,6 +96,8 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 
 上記手順を行っていない場合、以下のように表示されません。
 ![](https://storage.googleapis.com/zenn-user-upload/b51087e2d8ad-20250528.jpg)
+
+
 
 ### 2.5 ユーザーの初回サインイン エクスペリエンスを確認する！
 
