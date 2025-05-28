@@ -34,7 +34,9 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 
 
 以下の公開情報に沿って検証してみます。細かい前提条件を確認されたい場合、以下の公開情報が参考になります。
-#### 公開情報：[ Microsoft Entra ID の認証方法 - QR コード認証方法 (プレビュー) ](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/simplify-frontline-workers%E2%80%99-sign-in-experience-with-qr-code-authentication/3822034)
+[Microsoft Entra ID の認証方法 - QR コード認証方法 (プレビュー)](https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-authentication-qr-code)
+[Microsoft Entra ID で QR コード認証方法を有効にする方法 (プレビュー)](https://learn.microsoft.com/ja-jp/entra/identity/authentication/how-to-authentication-qr-code)
+
 
 1. 少なくとも認証ポリシー管理者以上で Entra 管理センター (https://entra.microsoft.com) にアクセスします。
 左のブレードの [保護] -> [認証方法] -> [QR コード認証 (プレビュー)] の順にクリックします。
@@ -115,12 +117,6 @@ Microsoft Teams, Managed Home Screen には、最適化された QR コード �
 ![](https://storage.googleapis.com/zenn-user-upload/eca410790795-20250528.jpg)
 
 ※初回サインインは、PIN の再設定を行った後サインインする動作となります。
-
-細かい条件や動作を確認されたい方は、以下の公開情報が参考になると思います。
-
-[Microsoft Entra ID の認証方法 - QR コード認証方法 (プレビュー)](https://learn.microsoft.com/ja-jp/entra/identity/authentication/concept-authentication-qr-code)
-[Microsoft Entra ID で QR コード認証方法を有効にする方法 (プレビュー)](https://learn.microsoft.com/ja-jp/entra/identity/authentication/how-to-authentication-qr-code)
-
 
 
 ## 3. まとめ
