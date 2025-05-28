@@ -58,8 +58,7 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 5. Entra 管理センターで [ユーザー] に移動し、QR コード認証を有効にしたいユーザーを選択し、[認証方法] をクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/2330d6bab684-20250527.png)
 
-6. [認証方法の追加] で、方法の選択の項目で QR コード(プレビュー)、必要に応じて有効期限を変更し、アクティブ化の時間を今すぐに選択します。
-初回サインインのみ有効な PIN を設定します。
+6. [認証方法の追加] で、方法の選択の項目で QR コード(プレビュー)、必要に応じて有効期限を変更し、アクティブ化の時間を今すぐに選択します。初回サインインのみ有効な PIN を設定します。
 ![](https://storage.googleapis.com/zenn-user-upload/0dc4a2c12a17-20250527.png)
 
 
@@ -107,7 +106,7 @@ Microsoft Teams, Managed Home Screen には、最適化された QR コード �
 ![](https://storage.googleapis.com/zenn-user-upload/00de026f150f-20250527.jpg)
 
 2. QR コードをスキャンします。
-![](https://storage.googleapis.com/zenn-user-upload/42b81499862a-20250528.jpg)
+![](https://storage.googleapis.com/zenn-user-upload/86b0f4779b35-20250528.jpg)
 
 3. QR コードの PIN を入力します。 
 ![](https://storage.googleapis.com/zenn-user-upload/9058d90c9bef-20250528.jpg)
