@@ -69,7 +69,7 @@ Entra ID の認証方法として、QR コード認証がプレビューされ�
 
 これで、選択したユーザーに対して、QR コード認証を有効化することができます。
 
-### 2.4 QR コードを使用して、Microsoft Microsoft Teams にサインインする！
+### 2.4 QR コードを使用して、Microsoft Teams にサインインする！
 上記 2.3 までの手順ですと、Web サインインに対して、QR コード認証が有効になる動作となります。
 Microsoft Teams, Managed Home Screen には、最適化された QR コード サインイン エクスペリエンスがあります。
 そのための設定を Intune から行います。
@@ -77,7 +77,7 @@ Microsoft Teams, Managed Home Screen には、最適化された QR コード �
 1. Intune 管理センター(https://intune.microsoft.com) で [アプリ] -> [構成] -> [新しいポリシー] -> [マネージド デバイス] の順にクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/7da8c83e5614-20250527.png)
 
-2. ポリシーの確認画面で、ポリシーの名前を入力し、プラットフォームは Android Enterprise を選択し、デバイスの種類は、"フル マネージド、専用、会社所有の仕事用プロファイルのみ" 、アプリは、Authenticator を選択します。
+2. ポリシーの確認画面で、ポリシーの名前を入力し、プラットフォームは Android Enterprise を選択し、デバイスの種類は、"フル マネージド、専用、会社所有の仕事用プロファイルのみ" を選択します。アプリは、Authenticator を選択します。
 ![](https://storage.googleapis.com/zenn-user-upload/e1a6b62171d5-20250527.png)
 
 3. 構成設定の形式は、[構成デザイナーを設定する] を選択します。右のブレードが表示されますので、Preferred authentication configuration を選択し、[OK] をクリックします。
@@ -92,10 +92,10 @@ Microsoft Teams, Managed Home Screen には、最適化された QR コード �
 6. 構成内容を確認し、[作成] をクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/ffbe649ffbfb-20250527.png)
 
-7. QR コード認証に対応している モバイルアプリケーションのサインイン画面に、QR コード認証が表示されます。
+7. QR コード認証に対応している モバイルアプリケーションのサインイン画面に、[Sign in with a QR code] が表示されます。
 ![](https://storage.googleapis.com/zenn-user-upload/00de026f150f-20250527.jpg)
 
-上記手順を行っていない場合、以下のように表示されません。
+上記手順を行っていない場合、以下のように [Sign in with a QR code] が表示されません。
 ![](https://storage.googleapis.com/zenn-user-upload/b51087e2d8ad-20250528.jpg)
 
 
@@ -104,7 +104,7 @@ Microsoft Teams, Managed Home Screen には、最適化された QR コード �
 
 さて、エンド ユーザー視点に立って、モバイル アプリの Teams に QR コード認証でサインインしてみます。
 
-1. Sign in with a QR code をクリックします。
+1. [Sign in with a QR code] をクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/00de026f150f-20250527.jpg)
 
 2. QR コードをスキャンします。
