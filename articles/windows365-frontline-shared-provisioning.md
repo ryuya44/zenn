@@ -10,45 +10,20 @@ published: false
 本記事は、2025 年 05 月の時点での情報となります。
 :::
 
-## はじめに
-ここでは 2024 年 11 月の Microsoft の技術カンファレンスである Ignite で発表された Windows 365 frontline の共有モードの展開・利用をした内容を紹介します。
-公式ドキュメントは[こちら](https://learn.microsoft.com/ja-jp/windows-365/enterprise/introduction-windows-365-frontline#windows-365-frontline-in-shared-mode-preview)
-:::message alert
-本機能は、プレビュー中のものであり、GA（一般公開）時とは異なる動作になる可能性がございます。
-:::
+## 1. 概要 Windows 365 Frontline の共有モードとは
 
-## 目次
-
-- はじめに
-- Windows 365 Frontline の共有モードとは
-    - 共有モードの概要
-    - ＜共有モードの利用シナリオ＞営業ぽくなるからいらないかな
-- 共有モードを展開する
-- 共有モードを使ってみる
-    - サインインエクスペリエンス
-    - 先に使っている人がいる状態で使ってみるとどうなる
-- まとめ
-
-## Windows 365 Frontline の共有モードとは
 ![](https://storage.googleapis.com/zenn-user-upload/5c888c80075f-20241204.png)
 
-前提として、Windows 365 Frontline は、上記スライドの左側にあたる専用モードと呼ばれる 1 ライセンスで 3 台のクラウド PC が利用できるモードがありました。
+前提として、Windows 365 Frontline は、上記スライドの左側にあたる専用モードと呼ばれる 1 ライセンスで 3 台のクラウド PC が利用できる専有モードがありました。
 
-今回の Ignite で、上記スライドの右側にあたる共有モードは、1 つのライセンスで、大人数が利用できる共有 PC のようなモードが新しく発表されました。
+今回の 4 月に GA された共有モードは、1 つのライセンスで、大人数が利用できる共有 PC のようなモードが新しく発表されました。
 
 ※ただし、いずれのモードも、アクティブ セッション数はライセンス 1 つにつき 1 までという制限があります。
 
-[公式ドキュメント](https://learn.microsoft.com/ja-jp/windows-365/enterprise/introduction-windows-365-frontline#windows-365-frontline-in-shared-mode-preview)に注意がありました。一般公開時に、確認する必要がありそうですね。
-以下公式ドキュメントを抜粋
+公開情報は、[MSLearn | Windows 365 Frontlineとは ](https://learn.microsoft.com/ja-jp/windows-365/enterprise/introduction-windows-365-frontline#windows-365-frontline-in-shared-mode-preview)
+細かい動作などを確認されたい方はクイック スタート ガイドもおすすめです。[Windows 365 Frontline Cloud PC in shared mode – Quick Start Guide | Microsoft Community Hub](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905)
 
-:::message alert
-
-注意
-パブリック プレビュー中に、共有クラウド PC に割り当てられたユーザーの潜在的な制限を評価しています。 詳細については、一般公開時に共有されます。
-
-:::
-
-## Windows 365 Frontline の共有モードを展開してみる
+## 2. Windows 365 Frontline の共有モードを展開してみる
 
 大まかな流れとして、2 つのステップがあります。
 - Entra 管理センターで展開するユーザー グループを作成
