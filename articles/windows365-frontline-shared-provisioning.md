@@ -10,18 +10,19 @@ published: false
 本記事は、2025 年 05 月の時点での情報となります。
 :::
 
-## 1. 概要 Windows 365 Frontline の共有モードとは
+## 1. 概要 - Windows 365 Frontline の共有モードとは- 
 
 ![](https://storage.googleapis.com/zenn-user-upload/5c888c80075f-20241204.png)
 
-前提として、Windows 365 Frontline は、上記スライドの左側にあたる専用モードと呼ばれる 1 ライセンスで 3 台のクラウド PC が利用できる専有モードがありました。
+まず、Windows 365 Frontline は、上記スライドの左側にあたる専用モードと呼ばれる 1 ライセンスで 3 台のクラウド PC が利用できる専有モードがありました。
 
-今回の 4 月に GA された共有モードは、1 つのライセンスで、大人数が利用できる共有 PC のようなモードが新しく発表されました。
+今回の 4 月に一般提供された共有モードは、1 つのライセンスで、大人数が利用できる共有 PC のようなモードが新しく発表されました。
 
 ※ただし、いずれのモードも、アクティブ セッション数はライセンス 1 つにつき 1 までという制限があります。
 
-公開情報は、[MSLearn | Windows 365 Frontlineとは ](https://learn.microsoft.com/ja-jp/windows-365/enterprise/introduction-windows-365-frontline#windows-365-frontline-in-shared-mode-preview)
-細かい動作などを確認されたい方はクイック スタート ガイドもおすすめです。[Windows 365 Frontline Cloud PC in shared mode – Quick Start Guide | Microsoft Community Hub](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905)
+公開情報 : [MSLearn | Windows 365 Frontlineとは ](https://learn.microsoft.com/ja-jp/windows-365/enterprise/introduction-windows-365-frontline#windows-365-frontline-in-shared-mode-preview)
+細かい動作などを確認されたい方はクイック スタート ガイドもおすすめです。
+[Windows 365 Frontline Cloud PC in shared mode – Quick Start Guide | Microsoft Community Hub](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905)
 
 ## 2. Windows 365 Frontline の共有モードを展開してみる
 
@@ -32,7 +33,7 @@ published: false
 また今回はネットワークをホストネットワークを選択し、展開します。
 
 :::message
-ここからの作業は Windows 365 frontline のライセンスを保有していることから始めます。
+ここからの作業は Windows 365 Frontline のライセンスを保有していることから始めます。
 購入や試用版ライセンスの入手については以下のサイトをご確認ください。
 https://www.microsoft.com/ja-jp/windows-365/enterprise/compare-plans-pricing
 :::
