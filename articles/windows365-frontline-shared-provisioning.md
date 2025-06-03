@@ -108,7 +108,7 @@ https://zenn.dev/takuyaot/books/7b576df97e9f22/viewer/39401e
 
 割り当て対象のユーザーに対して、先程のプロビジョニングポリシーで割り当て名に記載した名前で表示されます。
 [接続] をクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/68c20a31165f-20250603.png)
+![](https://storage.googleapis.com/zenn-user-upload/0cea3c8ae2c6-20250603.png)
 
 このように、共有モードで展開したクラウド PC にアクセスすることができました！
 ![](https://storage.googleapis.com/zenn-user-upload/fa504b0ce0e0-20250603.png)
