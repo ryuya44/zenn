@@ -45,7 +45,7 @@ https://zenn.dev/takuyaot/books/7b576df97e9f22/viewer/39401e
 
 
 
-### 1. Intune 管理センターでグループを作成する
+### 2.1 Intune 管理センターでグループを作成する
 
 1. [Intune 管理センター](https://intune.microsoft.com/) にアクセスします。
 
@@ -57,15 +57,13 @@ https://zenn.dev/takuyaot/books/7b576df97e9f22/viewer/39401e
 - グループの名前 : お好きな名前
 - メンバー : Windows 365 Frontline を利用するユーザー, グループを選択します。
 - [保存] をクリックします。
-
 ![](https://storage.googleapis.com/zenn-user-upload/44a9a14e1eda-20250603.png)
 
 これでグループの作成は完了です。
 
-### 2. Intune 管理センターでプロビジョニング ポリシーを作成する
+### 2.2 Intune 管理センターでプロビジョニング ポリシーを作成する
 
-1. 左のブレードの [デバイス] -> [Windows 365] -> [プロビジョニング ポリシー] -> [ポリシーの作成] をクリックします。
-
+1. 左のブレードの [デバイス] -> [Windows 365] -> [プロビジョニング ポリシー] -> [ポリシーの作成] の順にクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/8a8607d92dc8-20250602.png)
 
 2. 以下の内容で設定を行い、[次へ] をクリックします。
@@ -76,35 +74,46 @@ https://zenn.dev/takuyaot/books/7b576df97e9f22/viewer/39401e
 - ネットワーク : Microsoft がホストしているネットワーク
 - 地理 : 日本
 - リージョン : 東日本
-- Microsoft Entra シングル サインオン 
-
+- Microsoft Entra シングル サインオン にチェック
 ![](https://storage.googleapis.com/zenn-user-upload/1eca0c371bd3-20250602.png)
 
-3. イメージを選択します。今回は既定のまま進みます。
+3. ギャラリー イメージを選択します。今回は既定のまま進みます。
 ![](https://storage.googleapis.com/zenn-user-upload/c2626df8b7f1-20250603.png)
 
-4. 言語を選択します。その下に、Windows Autopilot の項目がありますが、こちらは、公開情報を参考にしてください。
-![](https://storage.googleapis.com/zenn-user-upload/ae552814372a-20250603.png)
-保存をクリックします。
-
-![](https://storage.googleapis.com/zenn-user-upload/89a7af2b4dca-20250603.png)
-
-![](https://storage.googleapis.com/zenn-user-upload/0ba4dcccd14c-20250603.png)
-
-![](https://storage.googleapis.com/zenn-user-upload/3312716c4774-20250603.png)
-
-![](https://storage.googleapis.com/zenn-user-upload/a7e453bb30cb-20250603.png)
-これでプロビジョニング ポリシーの作成は完了です。
-
-## Windows 365 Frontline の共有モードを使ってみる
-
-共有モードの展開直後から、アプリケーションなどを利用したい場合、プレビュー中の機能ではありますが、Autopilot デバイス準備で展開することも可能です。
+4. 言語を選択し、[次へ] をクリックします。
+※その下に、Windows Autopilot の項目がありますが、共有モードの展開直後から、アプリケーションなどを利用したい場合、プレビュー中の機能ではありますが、Autopilot デバイス準備で展開することも可能です。
 公開情報 :[クラウド PC で Autopilot デバイスの準備を使用する | Microsoft Learn](https://learn.microsoft.com/ja-jp/windows-365/enterprise/autopilot-device-preparation)
 
+![](https://storage.googleapis.com/zenn-user-upload/ae552814372a-20250603.png)
+
+5. スコープ タグは、既定のまま [次へ] をクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/89a7af2b4dca-20250603.png)
+
+6. この画面では、ポリシーの割り当て対象のグループを選択し、何台のクラウド PC をそのグループに割り当てるかを設定します。（※ライセンスの割り当てがここで行われます）
+- [グループを追加] をクリックし、割り当て対象のグループを選択し、[選択] をクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/0ba4dcccd14c-20250603.png)
+
+- クラウド PC のサイズをクリックします。
+  - 利用可能なクラウド PC を選択します。
+  - 割り当て名は、クラウド PC の利用ユーザーに表示される PC 名です。
+  - [選択] をクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/3312716c4774-20250603.png)
+
+7. 構成内容を確認し、[保存] をクリックします。
+![](https://storage.googleapis.com/zenn-user-upload/a7e453bb30cb-20250603.png)
+
+これでプロビジョニング ポリシーの作成は完了です。
+
+## 3. Windows 365 Frontline の共有モードを使ってみる
+
+割り当て対象のユーザーに対して、先程のプロビジョニングポリシーで割り当て名に記載した名前で表示されます。
+[接続] をクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/68c20a31165f-20250603.png)
 
+このように、共有モードで展開したクラウド PC にアクセスすることができました！
 ![](https://storage.googleapis.com/zenn-user-upload/fa504b0ce0e0-20250603.png)
-## 5. まとめ
+
+## 4. まとめ
 今回は、Windows 365 Frontline 共有モードを展開する方法をご紹介しました！
 本ブログがみなさまの参考になれば幸いです😉
 
