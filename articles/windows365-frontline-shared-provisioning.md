@@ -26,11 +26,11 @@ published: false
 
 ## 2. Windows 365 Frontline の共有モードを展開してみる
 
-大まかな流れとして、2 つのステップがあります。
-1. Entra 管理センターで展開するユーザー グループを作成する
-3. Intune 管理センターでプロビジョニング ポリシーを作成する
+大まかな流れとして、3 つのステップがあります。
+1. Entra 管理センターで展開するユーザー グループの作成
+2. 前提ライセンス (Entra ID P1, Intune Plan 1, Windows E3) の付与 
+3. Intune 管理センターでプロビジョニング ポリシーを作成
 
-また今回はネットワークをホストネットワークを選択し、展開します。
 
 :::message
 ここからの作業は Windows 365 Frontline のライセンスを保有していることから始めます。
@@ -38,11 +38,10 @@ published: false
 https://www.microsoft.com/ja-jp/windows-365/enterprise/compare-plans-pricing
 :::
 
-ユーザーの作成、ライセンスの付与などの詳細な手順は、以下の記事を参考にしてください。
+ユーザーの作成、ライセンスの付与などの詳細な手順は、以下の記事が参考になると思います。
 https://zenn.dev/takuyaot/books/7b576df97e9f22/viewer/39401e
 
-今回、**ユーザー**に割り当てる必要があるのは、Microsoft Entra ID P1, Intune Plan 1, Windows E3 を含むライセンスです。
-もちろん展開するグループに対して、ライセンスを割り当てても良いです。
+今回、Windows 365 Frontline の利用する**ユーザー**に割り当てる必要があるのは、**Microsoft Entra ID P1, Intune Plan 1, Windows E3** を含むライセンスです。
 
 Windows 365 Frontline のライセンスは、Intune のポータル上で**グループ**に対して割り当てます。
 
