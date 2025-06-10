@@ -3,7 +3,7 @@ title: "Windows 365 Frontline 共有モードを展開する方法 -"
 emoji: "🚁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["Windows", "Microsoft365", "Windows365"]
-published: false
+published: true
 ---
 
 :::message alert
@@ -24,7 +24,7 @@ published: false
 細かい動作などを確認されたい方はクイック スタート ガイドもおすすめです。
 [Windows 365 Frontline Cloud PC in shared mode – Quick Start Guide | Microsoft Community Hub](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905)
 
-## 2. Windows 365 Frontline の共有モードを展開してみる
+## 2. Windows 365 Frontline の共有モードを展開してみる！
 
 大まかな流れとして、3 つのステップがあります。
 1. 前提ライセンス (**Entra ID P1, Intune Plan 1, Windows E3**) の付与  
@@ -34,7 +34,7 @@ published: false
 
 
 :::message
-ここからの作業は、前提ライセンスおよび、Windows 365 Frontline のライセンスを保有していることから始めます。
+ここからの作業は、前提ライセンスを利用ユーザーに割り当て済みかつ、Windows 365 Frontline のライセンスを保有している(割り当てはしなくて OK )ことから始めます。上記のステップ 2 以降から行います。
 購入や試用版ライセンスの入手については以下のサイトをご確認ください。
 https://www.microsoft.com/ja-jp/windows-365/enterprise/compare-plans-pricing
 
@@ -45,7 +45,7 @@ https://zenn.dev/takuyaot/books/7b576df97e9f22/viewer/39401e
 
 
 
-### 2.1 Intune 管理センターでグループを作成する
+### 2.1 Intune 管理センターでグループを作成する！
 
 1. [Intune 管理センター](https://intune.microsoft.com/) にアクセスします。
 
@@ -61,7 +61,7 @@ https://zenn.dev/takuyaot/books/7b576df97e9f22/viewer/39401e
 
 これでグループの作成は完了です。
 
-### 2.2 Intune 管理センターでプロビジョニング ポリシーを作成する
+### 2.2 Intune 管理センターでプロビジョニング ポリシーを作成する！
 
 1. 左のブレードの [デバイス] -> [Windows 365] -> [プロビジョニング ポリシー] -> [ポリシーの作成] の順にクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/8a8607d92dc8-20250602.png)
@@ -104,7 +104,7 @@ https://zenn.dev/takuyaot/books/7b576df97e9f22/viewer/39401e
 
 これでプロビジョニング ポリシーの作成は完了です。
 
-## 3. Windows 365 Frontline の共有モードを使ってみる
+## 3. Windows 365 Frontline の共有モードを使ってみる！
 
 割り当て対象のユーザーに対して、先程のプロビジョニングポリシーで割り当て名に記載した名前で表示されます。
 [接続] をクリックします。
