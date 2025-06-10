@@ -49,11 +49,11 @@ https://zenn.dev/takuyaot/books/7b576df97e9f22/viewer/39401e
 
 1. [Intune 管理センター](https://intune.microsoft.com/) にアクセスします。
 
-2. 左のブレードの [グループ] > [新しいグループ] の順にクリックします。
+2. 左のブレードの [グループ] -> [新しいグループ] の順にクリックします。
 ![](https://storage.googleapis.com/zenn-user-upload/155c8fbec8f6-20250603.png)
 
 3. [新しいグループ] をクリックします。以下の内容を設定します。
-- グループの種類:セキュリティ
+- グループの種類: セキュリティ
 - グループの名前 : お好きな名前
 - メンバー : Windows 365 Frontline を利用するユーザー, グループを選択します。
 - [保存] をクリックします。
