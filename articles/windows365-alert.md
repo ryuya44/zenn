@@ -47,7 +47,7 @@ Windows 365 Frontline では、同時に使えるクラウド PC の数に制限
 まずは、アラート ルールを作成してみます。
 ![](https://storage.googleapis.com/zenn-user-upload/e571beadb215-20250901.png)
 
-設定値の概要と今回の設定値について
+**設定値の概要と今回の設定値について**
 
 条件 
 - しきい値
