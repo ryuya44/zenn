@@ -81,7 +81,7 @@ Windows 365 Frontline では、同時に使えるクラウド PC の数に制限
 ![](https://storage.googleapis.com/zenn-user-upload/7481439c1359-20250901.png)
 
 - 設定したメールアドレスの受信トレイに、アラートの概要のメールが届いていました。
-![](https://storage.googleapis.com/zenn-user-upload/eb95f559ef00-20250901.png)
+![](https://storage.googleapis.com/zenn-user-upload/526f4ff95e1c-20250901.png)
 
 
 今回の環境では、上記はクラウド PC にサインインしてほぼ即時通知されました。
