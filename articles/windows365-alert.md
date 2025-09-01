@@ -15,7 +15,7 @@ Intune の管理センターに、クラウド PC 用のアラート機能があ
 今回は、その機能を紹介しつつ、試してみたいと思います。
 ちなみにアラート機能は以下のようにたくさんあります！
 
-![]()
+![](https://storage.googleapis.com/zenn-user-upload/9a205cb54922-20250901.png)
 
 
 ### この機能のメリット
@@ -49,17 +49,14 @@ Windows 365 Frontline では、同時に使えるクラウド PC の数に制限
 ポイント Windows 365 Frontline の最大接続数をこの機能で監視することができます。
 :::
 
-### 2.1 構成の説明
-1. クラウド PC を日本の東リージョンに展開しています。ネットワークは Microsoft Hosted Network を利用しています。
-※リージョンは自動を選択することが推奨されています。今回は検証のため東日本にしました。
-![](https://storage.googleapis.com/zenn-user-upload/c674c31754d6-20250520.png)
-このポリシーで展開されたクラウドPC CPC-ryuya-67E4K を今回移動させる対象とします。
-![](https://storage.googleapis.com/zenn-user-upload/a0dbb159b327-20250520.png)
+### 2.1 アラート ルールの設定
+まずは、アラート ルールを作成してみます。
 
 
 
 
-### 2.2 クラウド PC を移動してみる！
+
+### 2.2 
 
 1. 移動させるクラウド PC を展開したポリシーを選択します。
 ![](https://storage.googleapis.com/zenn-user-upload/b6bcfa264212-20250520.png)
