@@ -33,14 +33,6 @@ Windows 365 Frontline では、同時に使えるクラウド PC の数に制限
 → 必要な情報だけを受け取れるように調整できます。
 
 #### 公開情報：[Windows 365のアラート | Microsoft Learn ](https://learn.microsoft.com/ja-jp/windows-365/enterprise/alerts)
-[クラウド PC アクション](https://learn.microsoft.com/ja-jp/windows-365/enterprise/report-cloud-pc-actions)
-[クラウド PC 接続品質レポート](https://learn.microsoft.com/ja-jp/windows-365/enterprise/report-cloud-pc-connection-quality)
-[クラウド PC の推奨事項](https://learn.microsoft.com/ja-jp/windows-365/enterprise/report-cloud-pcs-not-available)
-[クラウド PC 使用率レポート](https://learn.microsoft.com/ja-jp/windows-365/enterprise/report-cloud-pcs-not-available)
-[利用できないクラウド PC](https://learn.microsoft.com/ja-jp/windows-365/enterprise/report-cloud-pcs-not-available)
-[接続されている Frontline クラウド PC レポート](https://learn.microsoft.com/ja-jp/windows-365/enterprise/report-connected-frontline-cloud-pcs)
-[リソース パフォーマンス レポート](https://learn.microsoft.com/ja-jp/windows-365/enterprise/report-resource-performance)
-[クラウド PC のリージョン間ディザスター リカバリー状態レポート](https://learn.microsoft.com/ja-jp/windows-365/enterprise/cross-region-disaster-recovery-report)
 
 ## 2.試してみる！ 
 今回は、アラート機能の一つである、"Frontline クラウド PC がコンカレンシー制限に近づいています (プレビュー)" を試してみます。
@@ -51,12 +43,33 @@ Windows 365 Frontline では、同時に使えるクラウド PC の数に制限
 
 ### 2.1 アラート ルールの設定
 まずは、アラート ルールを作成してみます。
+![](https://storage.googleapis.com/zenn-user-upload/e571beadb215-20250901.png)
+
+設定値
+
+条件 
+- しきい値
+- - 最大接続数に対しての接続数の割合を設定します。今回は 50 % にします。
+
+設定
+- 重大度 
+- - アラートの分類を選択します。今回はクリティカルにします。
+- 状態
+- - このアラートを通知するかどうかを設定します。今回はもちろん "オン" にします。
+
+通知
+- ポータル ポップアップ 
+- - Intune 管理センター内でポップアップ画面として表示するか設定します。
+- メール　
+- - アラートを受信するためのメールアドレスを入力します
 
 
 
 
 
-### 2.2 
+
+
+### 2.2 アラート ルールの動きを確認する
 
 1. 移動させるクラウド PC を展開したポリシーを選択します。
 ![](https://storage.googleapis.com/zenn-user-upload/b6bcfa264212-20250520.png)
@@ -70,51 +83,11 @@ Windows 365 Frontline では、同時に使えるクラウド PC の数に制限
 ![](https://storage.googleapis.com/zenn-user-upload/7ffae5d40d92-20250520.png)
 
 
-4. 構成内容を確認の上、"更新" をクリックします
-![](https://storage.googleapis.com/zenn-user-upload/5be94379ccf0-20250520.png)
-
-
-5. "この構成を適用" をクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/2c9f828d8173-20250520.png)
-
-6. 今回は一台のみ、別リージョンに移動したいので、"選択したデバイスにリージョンまたは Azure ネットワーク接続" を選択し、"適用" をクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/8d88e22bbe47-20250520.png)
-
-
-7. デバイスの選択画面が表示されます。このプロビジョニングポリシーで展開している クラウド PC から移動するデバイスを選択し、画面下部の "選択" をクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/151146583cb9-20250520.png)
-これで、選択したデバイスに対して、別リージョンに移動する手順は完了です！
-
-
-## 3. 移動中のクラウド PC の状態を監視してみる！
-1. Microsoft Intune 管理センター の左のブレードの デバイス > 監視 > クラウド PC アクション（プレビュー）の順にクリックします。
-![](https://storage.googleapis.com/zenn-user-upload/8aee55451c73-20250520.png)
-
-
-2. クラウド PC の過去 90 日間のアクションの状態を表示されます。移動の対象デバイスについて、アクションがリージョンの移動、状態が "進行中" と確認できます。
-![](https://storage.googleapis.com/zenn-user-upload/945b10640b0f-20250520.png)
-完了すると状態が、"成功" になります。
-![](https://storage.googleapis.com/zenn-user-upload/ef4853d4ec90-20250520.png)
-
-
-## 4. ラウンドトリップを計測してみる!
-
-- 移動前
-接続元 : 東京
-接続先のクラウド PC : 日本
-ラウンドトリップ : 8 ミリ秒
-![](https://storage.googleapis.com/zenn-user-upload/ade62bbc2088-20250520.png)
-
-- 移動後
-接続元 : 東京
-接続先のクラウド PC : ドイツ
-ラウンドトリップ : 280 ミリ秒
-![](https://storage.googleapis.com/zenn-user-upload/8ebd35208a64-20250520.png)
-移動後、ラウンドトリップが大きくなったので、無事に移動できたことが確認できました！
 
 
 ## 5. まとめ
 今回は展開済みのクラウド PC を移動する方法をご紹介しました！
+簡単に、Windows 365 Frontline の同時接続数に対してアラートできました。
 本ブログがみなさまの参考になれば幸いです😉
 
 
