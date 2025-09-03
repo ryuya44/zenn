@@ -67,7 +67,6 @@ Windows 365 Frontline の共有モードの管理が便利になる、スケジ�
 また、Intune 管理センターの [デバイス]->[Windows 365]->[すべてのクラウド PC] で、指定した割合のクラウド PC が利用できる状態で再プロビジョニングされていることがわかります。
 ![](https://storage.googleapis.com/zenn-user-upload/475f86e0aab8-20250903.png)
 
-無事にプロビジョニングが完了されたことを確認できました。
 
 
 
@@ -93,7 +92,12 @@ Windows 365 Frontline の共有モードの管理が便利になる、スケジ�
 
 ![](https://storage.googleapis.com/zenn-user-upload/8a7f01db0334-20250903.png)
 
-4. 動作することを確認できました。
+4. スケジュールされた時刻に動作することを確認できました。
+再プロビジョニング中の状態です。
+![](https://storage.googleapis.com/zenn-user-upload/95c32c493886-20250903.png)
+
+10時40分に再プロビジョニングが完了したことを確認できました。
+![](https://storage.googleapis.com/zenn-user-upload/87a021a24678-20250903.png)
 
 ## 3. まとめ
 今回は、Windows 365 Frontline の共有モードで一括再プロビジョニング, 再プロビジョニングのスケジュールを試しました！
